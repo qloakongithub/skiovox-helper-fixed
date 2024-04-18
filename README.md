@@ -3,7 +3,7 @@
 
 ## Install
 
-**Installation steps can be seen in the "stage 3" section on [skiovox.com](https://skiovox.com)**
+Press code and then press "Download as ZIP".
 
 Once installed, open a new tab to see the extension's homepage.
 
