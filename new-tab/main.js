@@ -5,6 +5,7 @@ import { DateDisplay } from "./date-display.js";
 import { TimeDisplay } from "./time-display.js";
 import { BackgroundController } from "./background-controller.js";
 
+const OS_SETTINGS_URL = "chrome://os-settings";
 const WIFI_URL = "chrome://network/#select";
 const BLUETOOTH_URL = "chrome://bluetooth-pairing";
 const SETTINGS_URL = "chrome://settings";
@@ -35,6 +36,10 @@ let time = document.querySelector('.time')
 let battery = document.querySelector('.battery')
 
 version.textContent = "v" + chrome.runtime.getManifest().version
+
+wifi.addEventListener('click', () => {
+    chrome.tabs.create({ url: OS_SETTINGS_URL })
+})
 
 wifi.addEventListener('click', () => {
     chrome.tabs.create({ url: WIFI_URL })
